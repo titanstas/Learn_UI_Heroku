@@ -51,7 +51,7 @@ public class Heroku_upload_page extends BasePage {
         WebElement file_uploaded =  set_element_visible(file_uploaded_path);
 
        Assertions.assertEquals(
-               Heroku_download_page.file_name,
+               file_name,
                file_uploaded.getText()
        );
 

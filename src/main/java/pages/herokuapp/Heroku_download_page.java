@@ -7,10 +7,11 @@ import org.openqa.selenium.WebElement;
 import pages.BasePage;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
+import java.util.*;
 
 
 public class Heroku_download_page extends BasePage {
@@ -25,10 +26,7 @@ public class Heroku_download_page extends BasePage {
     /**
      *  Элемент для загрузки файла из Heroku файл
      */
-    public static String file_path = "//a[contains(@href,'luminoslogo')]";
-
-
-
+    public static String file_path = "//div//following-sibling::h3//following-sibling::a";
 
 
     /**
@@ -36,10 +34,7 @@ public class Heroku_download_page extends BasePage {
      */
     public static String file_directory ="D:\\files\\";
 
-    /**
-     *  Название файла
-     */
-    public static String file_name ="luminoslogo.png";
+
 
 
     /**
@@ -50,8 +45,14 @@ public class Heroku_download_page extends BasePage {
         WebElement button =  set_element_visible(file_path);
         button.click();
 
+
+        //Название файла
+        String file_name =button.getText();
+        //Время секунд без файла
         int seconds_without_file = 0;
+        //Путь к директории
         Path download_file_directory= Paths.get(file_directory);
+        //Путь к файлу
         Path download_file_path = Paths.get(file_directory+file_name);
 
 
@@ -85,11 +86,11 @@ public class Heroku_download_page extends BasePage {
 
         Assertions.assertTrue(Files.exists(download_file_path));
 
-        //Чтение содержимого файла по байтам
+        //Чтение содержимого файла по байтам в кидировке UTF_8
         try {
-            System.out.println(
-                    Arrays.toString(Files.readAllBytes(download_file_path))
-            );
+            byte[] file_bytes = Files.readAllBytes(download_file_path);
+            String file_lines = new String(file_bytes, StandardCharsets.UTF_8);
+            System.out.println(file_lines);
         } catch (IOException e) {
             System.out.println("Нет файла для чтения");
         }
