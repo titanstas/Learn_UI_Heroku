@@ -224,7 +224,7 @@ public class Heroku_main_page extends BasePage {
      */
     public Heroku_basic_auth_page goto_basic_auth_page()
     {
-        WebElement page_link =  set_element_visible(basic_auth_path);;
+        WebElement page_link =  set_element_visible(basic_auth_path);
         page_link.click();
 
         return new Heroku_basic_auth_page(driver);
@@ -235,7 +235,7 @@ public class Heroku_main_page extends BasePage {
      */
     public Heroku_broken_images_page goto_broken_images_page()
     {
-        WebElement page_link =  set_element_visible(broken_images_path);;
+        WebElement page_link =  set_element_visible(broken_images_path);
         page_link.click();
 
         return new Heroku_broken_images_page(driver);
@@ -246,7 +246,7 @@ public class Heroku_main_page extends BasePage {
      */
     public Heroku_challenging_dom_page goto_challenging_dom_page()
     {
-        WebElement page_link =  set_element_visible(challenging_dom_path);;
+        WebElement page_link =  set_element_visible(challenging_dom_path);
         page_link.click();
 
         return new Heroku_challenging_dom_page(driver);
@@ -257,7 +257,7 @@ public class Heroku_main_page extends BasePage {
      */
     public Heroku_checkboxes_page goto_Checkboxes_page()
     {
-        WebElement page_link =  set_element_visible(checkboxes_path);;
+        WebElement page_link =  set_element_visible(checkboxes_path);
         page_link.click();
 
         return new Heroku_checkboxes_page(driver);
@@ -268,7 +268,7 @@ public class Heroku_main_page extends BasePage {
      */
     public Heroku_context_menu_page goto_context_menu_page()
     {
-        WebElement page_link =  set_element_visible(context_menu_path);;
+        WebElement page_link =  set_element_visible(context_menu_path);
         page_link.click();
 
         return new Heroku_context_menu_page(driver);
@@ -279,7 +279,7 @@ public class Heroku_main_page extends BasePage {
      */
     public Heroku_disappearing_elements_page goto_disappearing_elements_page()
     {
-        WebElement page_link =  set_element_visible(disappearing_elements_path);;
+        WebElement page_link =  set_element_visible(disappearing_elements_path);
         page_link.click();
 
         return new Heroku_disappearing_elements_page(driver);
@@ -290,7 +290,7 @@ public class Heroku_main_page extends BasePage {
      */
     public Heroku_drag_and_drop_page goto_drag_and_drop_page()
     {
-        WebElement page_link =  set_element_visible(drag_and_drop_path);;
+        WebElement page_link =  set_element_visible(drag_and_drop_path);
         page_link.click();
 
         return new Heroku_drag_and_drop_page(driver);
@@ -301,7 +301,7 @@ public class Heroku_main_page extends BasePage {
      */
     public Heroku_dropdown_page goto_dropdown_page()
     {
-        WebElement page_link =  set_element_visible(dropdown_path);;
+        WebElement page_link =  set_element_visible(dropdown_path);
         page_link.click();
 
         return new Heroku_dropdown_page(driver);
@@ -312,7 +312,7 @@ public class Heroku_main_page extends BasePage {
      */
     public Heroku_dynamic_content_page goto_dynamic_content_page()
     {
-        WebElement page_link =  set_element_visible(dynamic_content_path);;
+        WebElement page_link =  set_element_visible(dynamic_content_path);
         page_link.click();
 
         return new Heroku_dynamic_content_page(driver);
@@ -323,7 +323,7 @@ public class Heroku_main_page extends BasePage {
      */
     public Heroku_dynamic_controls_page goto_dynamic_controls_page()
     {
-        WebElement page_link =  set_element_visible(dynamic_controls_path);;
+        WebElement page_link =  set_element_visible(dynamic_controls_path);
         page_link.click();
 
         return new Heroku_dynamic_controls_page(driver);
