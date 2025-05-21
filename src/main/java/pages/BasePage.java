@@ -193,7 +193,9 @@ public class BasePage {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).build().perform();
     }
-
+    /**
+     * Метод для просмотра логов всех уровней
+     */
     public void get_all_level_logs() {
         Set<String> logtyp = driver.manage().logs().getAvailableLogTypes();
         for (String s : logtyp) {
